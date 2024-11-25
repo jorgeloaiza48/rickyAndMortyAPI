@@ -9,7 +9,7 @@
     border: solid 2px blue;
 }
 
-.heroes-container > .card {
+.heroes-container>.card {
     border: solid 2px blue;
     border-radius: 1%;
     width: 100%;
@@ -17,17 +17,19 @@
     box-shadow: 0 0 10px #c4c4c4;
 }
 
-.heroes-container > .card-body {
+.heroes-container>.card-body {
     text-align: center;
 }
-h5, h1{
+
+h5,
+h1 {
     text-align: center;
 }
 
 .btn {
-   margin-left: 25%;
-   margin-bottom: 5%;
-   margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     width: 50%;
     background-color: #1c1c1c;
     border-radius: 5%;
@@ -35,24 +37,40 @@ h5, h1{
     box-shadow: 0 0 10px #000;
     font-weight: 600;
 }
-img{
-   width: 100%;
+
+img {
+    width: 100%;
 }
 
+.padreindividual {
+    display: flex;
+    justify-content: center;
+}
+
+.hijoindividual {
+    border: 2px solid blue;
+    margin-top: 10%;
+}
+
+p {
+    padding-left: 5%;
+}
+
+
 @media(min-width: 768px) {
-    .heroes-container > .card {
-        width: calc(100% / 2  - 1em);
+    .heroes-container>.card {
+        width: calc(100% / 2 - 1em);
     }
 }
 
 @media(min-width: 992px) {
-    .heroes-container > .card {
-        width: calc(100% / 3  - 1em);
+    .heroes-container>.card {
+        width: calc(100% / 3 - 1em);
     }
 }
 
 @media(min-width: 1200px) {
-    .heroes-container > .card {
-        width: calc(100% / 4  - 1em);
+    .heroes-container>.card {
+        width: calc(100% / 4 - 1em);
     }
 }
