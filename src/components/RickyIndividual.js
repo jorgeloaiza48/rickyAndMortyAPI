@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
@@ -7,19 +7,28 @@ import Swal from 'sweetalert2'
 
 export default function RickyIndividual() {
   const [individual, setIndividual] = useState([])
-  const [isLoading, setIsLoaiding] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
   const { id } = useParams()
 
-  fetch(`https://rickandmortyapi.com/api/character/${id}`)
-    .then((response) => response.json())
-    .then((response) => setIndividual(response))
-    .then(() => setIsLoaiding(false))
 
-//Con SweetAlert
+  useEffect(() => {
+    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+      .then((response) => response.json())
+      .then((response) => {
+        setIndividual(response)
+        setIsLoading(false)
+      })
+  })
+
+
+
+  //Con SeweetAlert
   if (isLoading) {
     Swal.fire({ title: "Cargando datos..." })
     Swal.showLoading()
   }
+  else
+    Swal.close()
 
   //Con react-spinners
   /* if (isLoading) {
