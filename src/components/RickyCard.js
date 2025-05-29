@@ -1,24 +1,24 @@
-import React from 'react'
-//import { useState } from 'react';
-//import RickyIndividual from './RickyIndividual'
-import { Link } from "react-router-dom";
+import React from 'react';
+import { FaInfoCircle } from 'react-icons/fa'; // ícono de carrito
+import { Link } from 'react-router-dom';
+import './ricky.css'
 
 function RickyCard({ character }) {
-    
-
-    return (
-        <div className='card'>
-            <img src={character.image} alt={character.name} />
-            <div className='card-body'>
-               {/*  <h5 className='card-title'>{character.name}</h5> */}
-                <Link to={`/individual/${character.id}`}>
-                    <button className='btn' key={character.id} >Detalles</button>
-                </Link>
-                {/*  {buttonClicked && <RickyIndividual />} */}
-                {/* {buttonClicked ? <RickyIndividual id={character.id} /> : null} */}
-            </div>
-        </div>
-    )
+  return (
+    <div className='card'>
+      <img src={character.image} alt={character.name} />
+      <div className='card-body'>
+        {/* <h5 className='card-title'>{character.name}</h5> */}
+        <Link to={`/individual/${character.id}`}>
+          <button className='btn-details' key={character.id}>
+            <FaInfoCircle className='btn-icon' />
+            Ver detalles
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-export default RickyCard
+export default RickyCard;
+

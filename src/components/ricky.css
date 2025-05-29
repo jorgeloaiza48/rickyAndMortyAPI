@@ -74,3 +74,69 @@ p {
         width: calc(100% / 4 - 1em);
     }
 }
+
+
+.btn-details {
+  margin-top: 20px; /* aumenta espacio superior */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-details:hover {
+  background-color: #0056b3;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+
+.btn-details:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(27,31,53,0.3);
+}
+
+.btn-details:hover .btn-icon {
+  transform: rotate(20deg) translateX(3px);
+}
+
+
+.card-body {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente si hay más elementos */
+  padding: 10px;
+}
+
+.btn-details {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espacio entre icono y texto */
+  transition: background-color 0.3s ease;
+}
+
+.btn-details:hover {
+  background-color: #0056b3;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+
